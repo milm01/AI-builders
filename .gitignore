@@ -28,8 +28,9 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.ipynb_checkpoints/
 
 # --- OS & System Files ---
 .DS_Store
 Thumbs.db
+
+!*.ipynb
