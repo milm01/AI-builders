@@ -7,18 +7,18 @@ This repository contains tools and notebooks for training, evaluating, and deplo
 ## 📂 Core Components
 
 ### 1. Model Evaluation & Comparison
-* **[`compare_models.py`](file:///d:/School/Python/builderthing/aibuilder/compare_models.py)**: A comprehensive evaluation script used to compare different object detection architectures and create a baseline to measure our own custom YOLO26 model against standard models (RT-DETR, YOLOv8, and YOLOv11).
+* **[`compare_models.py`](file:///d:/School/Python/builderthing/aibuilder/compare_models.py)**: An evaluation script used to compare different object detection architectures and create a baseline to measure my own custom YOLO26 model against standard models (RT-DETR, YOLOv8, and YOLOv11).
   * Automatically calculates metrics like Precision, Recall, mAP@50, mAP@50-95, inference latency, parameter counts, and FLOPs.
   * Generates visual side-by-side grid overlays of model predictions to inspect qualitative differences.
   * Outputs summary data directly into a spreadsheet format.
 * **[`model_comparison.csv`](file:///d:/School/Python/builderthing/aibuilder/model_comparison.csv)**: A spreadsheet recording baseline performance comparison metrics.
 
 ### 2. Model Training
-* **[`trainyolo26.ipynb`](file:///d:/School/Python/builderthing/aibuilder/trainyolo26.ipynb)**: An interactive Jupyter Notebook for configuring, training, and fine-tuning the custom YOLO26 model architecture.
+* **[`trainyolo26.ipynb`](file:///d:/School/Python/builderthing/aibuilder/trainyolo26.ipynb)**: A Notebook for configuring, training, and fine-tuning YOLO26.
 
 ### 3. Robotic Deployment
-* **[`robotcontrol/`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol)**: Contains deployment scripts for Raspberry Pi hardware.
-  * **[`dumbassrobot.py`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol/dumbassrobot.py)**: A real-time autonomous robot control script. It utilizes Tkinter for a control GUI, OpenCV for live video streaming, PCA9685/ServoKit for robotic arm control, and YOLO model inference to identify, track, and sort target objects.
+* **[`robotcontrol/`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol)**: Contains deployment script for Raspberry Pi hardware.
+  * **[`dumbassrobot.py`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol/dumbassrobot.py)**: A robot control script. It utilizes Tkinter for a control GUI, OpenCV for live video streaming, PCA9685/ServoKit for robotic arm control, and YOLO model inference to identify, track, and sort target objects.
 
 ---
 
