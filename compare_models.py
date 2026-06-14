@@ -93,17 +93,28 @@ def main():
     args = parse_args()
     
     workspace_dir = os.path.dirname(os.path.abspath(__file__))
-    yolo_path = os.path.join(workspace_dir, "aibuilder", "6th.pt")
     
+    yolo_path = os.path.join(workspace_dir, "aibuilder", "6th.pt")
+    if not os.path.exists(yolo_path):
+        alt_yolo_path = os.path.join(workspace_dir, "6th.pt")
+        if os.path.exists(alt_yolo_path):
+            yolo_path = alt_yolo_path
+            
     if os.path.isabs(args.data):
         if os.path.isdir(args.data):
             data_yaml = os.path.join(args.data, "data.yaml")
         else:
             data_yaml = args.data
     else:
-        data_yaml = os.path.join(workspace_dir, "aibuilder", args.data, "data.yaml")
-        if not os.path.exists(data_yaml) and os.path.exists(os.path.join(workspace_dir, "aibuilder", args.data)):
-            data_yaml = os.path.join(workspace_dir, "aibuilder", args.data)
+        direct_path = os.path.abspath(args.data)
+        if os.path.isdir(direct_path):
+            data_yaml = os.path.join(direct_path, "data.yaml")
+        elif os.path.isfile(direct_path):
+            data_yaml = direct_path
+        else:
+            data_yaml = os.path.join(workspace_dir, "aibuilder", args.data, "data.yaml")
+            if not os.path.exists(data_yaml) and os.path.exists(os.path.join(workspace_dir, "aibuilder", args.data)):
+                data_yaml = os.path.join(workspace_dir, "aibuilder", args.data)
     
     project_dir = os.path.join(workspace_dir, "runs", "detect")
     

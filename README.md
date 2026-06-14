@@ -33,13 +33,16 @@ You can find the pre-trained model weights and datasets for this project on my H
 ### Running the Comparison Pipeline
 To run a evaluation and generate comparison results:
 ```powershell
-python compare_models.py --train-yolov8 --train-yolov11 --epochs 30 --batch 32
+python compare_models.py --train-yolov8 --train-yolov11 --epochs 30 --batch 32 --data "D:\Python\bottle.yolo26"
 ```
 Options:
 - `--train-yolov8` / `--train-yolov11`: Train baseline YOLOv8/YOLOv11 models on your dataset.
 - `--retrain`: Forces training even if weights exist.
 - `--epochs <N>`: Set the number of epochs.
 - `--batch <N>`: Set the batch size.
+- `--data <path>`: Set the path to the dataset folder or data.yaml file. (e.g. `--data "D:\Python\bottle.yolo26"`)
+- `--rtdetr-variant <variant>`: Set the RT-DETR model variant to use as baseline. (e.g. `--rtdetr-variant "rtdetr-x.pt"`)
+- `--num-compare <N>`: Set the number of sample images to generate visual comparisons for. (e.g. `--num-compare 20`) (You can run python compare_models.py --num-compare <N> to compare images without training if you have already trained the models.)
 
 ### Training the YOLO26 Model
 Open `trainyolo26.ipynb` using Jupyter Notebook, VS Code Jupyter Extension, or Google Colab. Run the setup cells, configure your data directory, and start the training process.
