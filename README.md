@@ -32,6 +32,7 @@ You can find the pre-trained model weights and datasets for this project on my H
 
 ### Running the Comparison Pipeline
 To run a evaluation and generate comparison results:
+Place the 6th.pt file inside the same folder as compare_models.py. It is the yolo26 model.
 ```powershell
 python compare_models.py --train-yolov8 --train-yolov11 --epochs 30 --batch 32 --data "dataset/directory"
 ```
