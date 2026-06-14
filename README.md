@@ -33,7 +33,7 @@ You can find the pre-trained model weights and datasets for this project on my H
 ### Running the Comparison Pipeline
 To run a evaluation and generate comparison results:
 ```powershell
-python compare_models.py --train-yolov8 --train-yolov11 --epochs 30 --batch 32 --data "D:\Python\bottle.yolo26"
+python compare_models.py --train-yolov8 --train-yolov11 --epochs 30 --batch 32 --data "dataset/directory"
 ```
 Options:
 - `--train-yolov8` / `--train-yolov11`: Train baseline YOLOv8/YOLOv11 models on your dataset.
