@@ -1,4 +1,4 @@
-# AI Object Detection & Robot Control Pipeline
+# AI Object Detection & Robot Control
 
 This repository contains tools and notebooks for training, evaluating, and deploying object detection models, specifically tailored for sorting tasks using a robotic arm and platform.
 
@@ -17,8 +17,9 @@ This repository contains tools and notebooks for training, evaluating, and deplo
 * **[`trainyolo26.ipynb`](file:///d:/School/Python/builderthing/aibuilder/trainyolo26.ipynb)**: A Notebook for configuring, training, and fine-tuning YOLO26.
 
 ### 3. Robotic Deployment
-* **[`robotcontrol/`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol)**: Contains deployment script for Raspberry Pi hardware.
-  * **[`dumbassrobot.py`](file:///d:/School/Python/builderthing/aibuilder/robotcontrol/dumbassrobot.py)**: A robot control script. It utilizes Tkinter for a control GUI, OpenCV for live video streaming, PCA9685/ServoKit for robotic arm control, and YOLO model inference to identify, track, and sort target objects.
+* **[`robot/`](file:///d:/School/Python/builderthing/aibuilder/robot)**: Contains a script to control the robot through a Raspi, and an STL file of the robot.
+  * **[`robotcontrol.py`](file:///d:/School/Python/builderthing/aibuilder/robot/robotcontrol.py)**: A robot control script. It utilizes Tkinter for a control GUI, OpenCV for live video streaming, PCA9685/ServoKit for robotic arm control, and YOLO model inference to identify, track, and sort target objects.
+  * **[`shitslopbot.stl`](file:///d:/School/Python/builderthing/aibuilder/robot/robothardware/shitslopbot.stl)**: An STL file of the robot.
 
 ---
 
