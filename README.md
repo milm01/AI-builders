@@ -4,12 +4,12 @@ This repository contains tools and notebooks for training, evaluating, and deplo
 
 ---
 
-## 📂 Core Components
+## 📂 Files
 
 ### 1. Model Evaluation & Comparison
 * **[`compare_models.py`](file:///d:/School/Python/builderthing/aibuilder/compare_models.py)**: An evaluation script used to compare different object detection architectures and create a baseline to measure my own custom YOLO26 model against standard models (RT-DETR, YOLOv8, and YOLOv11).
-  * Automatically calculates metrics like Precision, Recall, mAP@50, mAP@50-95, inference latency, parameter counts, and FLOPs.
-  * Generates visual side-by-side grid overlays of model predictions to inspect qualitative differences.
+  * Calculates metrics like Precision, Recall, mAP@50, mAP@50-95, inference latency, parameter counts, and FLOPs.
+  * Generates visual side-by-side grid overlays of model predictions to inspect differences.
   * Outputs summary data directly into a spreadsheet format.
 * **[`model_comparison.csv`](file:///d:/School/Python/builderthing/aibuilder/model_comparison.csv)**: A spreadsheet recording baseline performance comparison metrics.
 
